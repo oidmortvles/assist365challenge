@@ -18,19 +18,32 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## Decisiones Tomadas
 
-To learn more about Next.js, take a look at the following resources:
+Al ser una sección que esta destinada a un agente interno y no un consumidor final, opte por dejar los controles de filtros y paginación en la parte superior.
+Limpié la ui de distracciones pensando en ese agente que puede tener en linea al Cliente y en una estetica de poco contraste para no cansar la vista en caso de que la busqueda sea extensa.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Priorice que sea Mobile First en caso de que un Usuario tenga acceso a ella y que los mensajes sean claros y breves.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Me asegure de proteger la ruta del backend usando un routeHandler. En caso de que el backend fallé, le llegue una respuesta al usuario con un error.tsx y de controlé las interacciones para no hacer peticiones innecesarios.
 
-## Deploy on Vercel
+Pensé en usar Zustand para el manejo de estados globales pero me parecio un costo innecesario por el tamaño de la app actual.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Mejoras
+Al momento de hacer la prueba estaba un poco tenso y no logre terminarlo. La hora me pasó muy rápido.
+
+Me base en una hoja de estilos que usé en otro proyecto, me gustaria haberle dado mejor una identidad.
+
+Otra posible mejora que me retraso un poco fue pensar si habia una mejor manera de hacer esto más SSR. Pensé en que los primeros datos se carguen con una peticion async desde page.tsx pero lo descarté porque generaba una doble peticion innecesaria.
+Aun asi creo que es un desarrollo muy aceptable para esta prueba.
+
+
+
+
+
+
+
+
+

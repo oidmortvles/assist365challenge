@@ -1,0 +1,21 @@
+.pagination{
+    width: calc(40%);
+    min-height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: .5rem;
+    background-color: var(--color1b);
+    border-radius: var(--border);
+    box-shadow: -4px 7px 15px 0px var(--blackTransparent);
+    position: absolute;
+    bottom: -1.5rem;
+}
+
+
+@media only screen and (max-width: 850px){
+    .pagination{
+        width: 100%;
+    }
+}

@@ -1,0 +1,75 @@
+.cardReserve{
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--blackTransparent);
+    gap: 1rem;
+    border-radius: var(--border);
+    transition: background-color .3s ease-in;
+}
+
+
+.cardReserve:hover{
+    background-color: var(--blackDiff);
+}
+
+
+.cardReserve p{
+    color:var(--white);
+}
+
+
+.cardReserve h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header p{
+    font-size: small;
+    font-weight: 600;
+}
+
+
+.status{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+
+.group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1rem;
+    gap: .5rem;
+}
+
+
+.pin, .calendar{
+    fill: var(--white);
+}
+
+
+.bold{
+    font-weight: 600;
+    color: var(--white);
+}
+
+
+@media only screen and (max-width: 850px){
+    .cardReserve{
+        padding: 1.5rem 1rem;
+    }
+}
