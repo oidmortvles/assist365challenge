@@ -11,14 +11,20 @@ import styles from './GroupInputs.module.css';
 
 const GroupInputs: React.FC <groupInputsProps> = ({pasajero,reserva, definePasajero, defineReserva }) => {
 
-    const reserveChange = ( e:React.ChangeEvent<HTMLInputElement>) => {
+    const reserveChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        
         defineReserva(e.target.value);
-        e.target.value !== "" && definePasajero("");
+        if (e.target.value !== "") {
+            definePasajero("");
+        }
     }
-
-    const pasengerChange = (e:React.ChangeEvent<HTMLInputElement>) => {
+    
+    const pasengerChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        
         definePasajero(e.target.value);
-        e.target.value !== "" && defineReserva("");
+        if (e.target.value !== "") {
+            defineReserva("");
+        }
     }
 
     return(
